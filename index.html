@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Memory Game</title>
+        <link rel="stylesheet" href="style.css" />
+        <link
+            href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+            integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+            crossorigin="anonymous"
+        />
+        <script type="text/javascript" src="js/globals.js" defer></script>
+        <script type="text/javascript" src="js/app.js" defer></script>
+        <script type="text/javascript" src="js/initMenu.js" defer></script>
+    </head>
+    <body>
+        <nav id="navbar" class="hidden">
+            <div>
+                <button id="back-btn" class="button transparent-background" href="/">Back</button>
+                <button id="restart-btn" class="button transparent-background" href="/">
+                    Restart
+                </button>
+            </div>
+            <div><span id="timer"></span></div>
+            <div><span id="player-name-display">Anonymous</span></div>
+        </nav>
+
+        <div id="game-menu" class="container transparent-background">
+            <h1 class="title">Memory Game</h1>
+
+            <div class="sub-title">
+                Made with
+                <a
+                    href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5"
+                    target="_blank"
+                >
+                    HTML5
+                </a>
+                ,
+                <a href="http://vanilla-js.com/" target="_blank">JavaScript</a>
+                and
+                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3" target="_blank">
+                    CSS3
+                </a>
+            </div>
+
+            <div class="control-panel">
+                <h3>Select a dificulty level</h3>
+
+                <div id="dificulty-selector">
+                    <button class="button transparent-background selected">Easy</button>
+                    <button class="button transparent-background">Medium</button>
+                    <button class="button transparent-background">Hard</button>
+                </div>
+
+                <div id="player-name-input">
+                    <input maxlength="10" placeholder="Enter your name" />
+                </div>
+
+                <button
+                    id="play-btn"
+                    class="button transparent-background"
+                    value="PLAY"
+                >
+                    PLAY!
+                </button>
+            </div>
+        </div>
+
+        <div id="game-area" class="hidden"></div>
+    </body>
+</html>
