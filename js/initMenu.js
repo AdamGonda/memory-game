@@ -4,7 +4,7 @@
 
     const setPlayerName = () => {
         let name = document.getElementById('player-name-input').firstElementChild.value;
-        document.getElementById('player-name-display').innerHTML = name ? name : 'anonymus';
+        document.getElementById('player-name-display').innerHTML = name ? name : G.DEFAULT_PLAYER_NAME;
     }
     
     const removeClassFromChildren = (parentNode, className) => {
