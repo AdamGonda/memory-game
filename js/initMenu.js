@@ -3,22 +3,14 @@
     const toggleVisibility = ids => ids.map(id => document.getElementById(id).classList.toggle('hidden'));
 
     const setPlayerName = () => {
-        let name = document.getElementById('player-name-input').firstElementChild.value;
+        const name = document.getElementById('player_name_input_container').firstElementChild.value;
         document.getElementById('player-name-display').innerHTML = name ? name : G.DEFAULT_PLAYER_NAME;
     }
     
-    const removeClassFromChildren = (parentNode, className) => {
-        Array.from(parentNode.children).map(child => {
-            if (child.classList.contains(className)) {
-                child.classList.toggle(className);
-            }
-        })
-    }
-
     // DIFFICULTY SELECTOR
     Array.from(document.getElementById('dificulty-selector').children).map(child => {
         child.addEventListener('click', e => {
-            removeClassFromChildren(child.parentNode, 'selected');
+            document.querySelector('.selected').classList.toggle('selected');
             child.classList.toggle('selected');
             G.selectedDifficulty = child.innerHTML;
         });
@@ -26,6 +18,7 @@
 
     // BACK BUTTON
     document.getElementById('back-btn').addEventListener('click', e => {
+        app.resetGame();
         toggleVisibility(['game-menu', 'navbar', 'game-area'])
     });
 

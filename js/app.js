@@ -1,7 +1,6 @@
 const app = {
     startGame: () => {
-        G.found_pairs = 0;
-        G.peekedCards = [];
+        app.resetGame();
 
         const random_symbols = app.getRandomSymbols(G.NUMBER_OF_CARDS);
         G.IN_GAME_SYMBOLS = app.shuffle(random_symbols.concat(random_symbols));
@@ -13,6 +12,12 @@ const app = {
 
     getRandomSymbols: () => {
         return app.getRandomIndexes(G.NUMBER_OF_CARDS / 2).map(x => G.POSSIBLESYMBOLS[x]);
+    },
+
+    resetGame: () => {
+        G.found_pairs = 0;
+        G.peekedCards = [];
+        clearInterval(G.timer);
     },
 
     getRandomIndexes: numberOfIdxs => {
@@ -87,8 +92,7 @@ const app = {
                     resetPeekedCards();
 
                     if (G.found_pairs == G.NUMBER_OF_CARDS / 2) {
-                        clearInterval(G.timer);
-                        G.found_pairs = 0;
+                        app.resetGame();
                         alert(G.WIN_MESSAGE);
                     }
                 } else {
