@@ -1,4 +1,4 @@
-let app = {
+const app = {
     startGame: () => {
         G.found_pairs = 0;
         G.peekedCards = [];
