@@ -3,6 +3,8 @@ This is a simple memory game that I made to practice some JavaScript, CSS, and H
 I liked to create a single page application with more views using only Vanilla JS. 
 It's hard to organize your JS code after a certain point without the use of any framework but this project was small enough to pull it off easily I think.
 
+![Menu](https://github.com/AdamGonda/memory-game/blob/master/Screenshot%202019-05-27%20at%2017.05.37.png)
+
 The hardest part is to keep everything clean, it looks like this, with the abstraction levels all messed up:
 ```
 1. You have to grab something from a DOM.
