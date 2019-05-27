@@ -15,6 +15,6 @@ The hardest part is to keep everything clean, it looks like this, with the abstr
 3. It's still just kind of a label, you don't see what it does for a first glance.
 4. The actual thing that you can reason about what it does exactly.
 ```
-And repeat this all across the app every time when you like to add the other event listener and event handler, so it can be messy very quickly if you don't pay attention.
+And repeat this all across the app every time when you like to add the other event listener and event handler pair, so it can be messy very quickly if you don't pay attention.
 But it was fun :D
 # [Try it out](https://adamgonda.github.io/memory-game/)
